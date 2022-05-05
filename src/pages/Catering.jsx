@@ -1,7 +1,7 @@
-import React from 'react';
+import Hero from '../components/Hero';
 
 function Catering() {
-  return <div className="center">Catering</div>;
+  return <Hero page={'catering'} header={'Catering'} />;
 }
 
 export default Catering;

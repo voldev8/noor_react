@@ -5,6 +5,8 @@ body, html {
   margin: auto;
   width: 50%;
 }
+
+
 /** Navbar**/
 .p-menu1 {
   display: none;
@@ -84,4 +86,223 @@ nav ul li span {
 .copyright p {
   font-size: 0.8rem;
   color:rgba(0, 0, 0, 0.4)
+}
+
+/* Home */
+.section-main {
+  padding-top: 4rem;
+  padding-left: 18rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card h1 {
+ font-size: 3rem;
+ font-weight: 700;
+ align-self: center;
+ color: #c00a27;
+ opacity: 0.4;
+}
+
+/**slideShow**/
+.card {
+  position: relative;
+  width: 900px;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 900;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card_part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: translateX( 900px );
+  background-image: url( ./assets/mediterranean_grill_somerville.jpg );
+  background-size: cover;
+  animation: picTransition 21s cubic-bezier(0, 0, 0, 0.9) infinite;
+}
+
+
+.card_part.card_part-two {
+  z-index: 6;
+  background-image: url( ./assets/Kebab.jpg );
+  animation-delay: 7s;
+}
+
+.card_part.card_part-three {
+  z-index: 5;
+  background-image: url( ./assets/Falafel-balls.jpg );
+  animation-delay: 14s;
+}
+
+@keyframes picTransition {
+  2% { transform: translateX( 0 ); }
+  25% { transform: translateX( 0 ); }
+  28% { transform: translateX( -900px ); }
+  100% { transform: translateX( -900px ); }
+}
+
+.aside {
+  display: flex;
+  align-content: space-around;
+  flex-flow: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.aside-card {
+  padding: 4rem 4rem;
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.aside-card h3 {
+  padding: 1rem;
+  text-align: center;
+}
+.aside-card img {
+  align-self: center;
+  height: 5rem;
+  width: auto;
+  margin: 1rem;
+}
+.aside-card p {
+  padding: 1rem;
+  align-self: center;
+}
+
+
+
+/**apps & sides**/
+.section-header {
+  margin-left: 18rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:60vh;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+.section-sides-header {
+  background-image: url(./assets/Falafel-balls.jpg);
+}
+.section-salads-header {
+  background-image: url(./assets/Tabbouli-Noor.jpg);
+}
+.section-wraps-header {
+  background-image: url(./assets/noor-works.jpg);
+}
+.section-dinners-header {
+  background-image: url(./assets/noor-trio-kebab-mix.jpg);
+}
+.section-desserts-header {
+  background-image: url(./assets/Traditional-baklava.jpg);
+}
+.section-beverages-header {
+  background-image: url(./assets/soda-beverages.jpg);
+}
+.section-catering-header {
+  background-image: url(./assets/Kebab.jpg);
+}
+.section-contact-header {
+  background-image: url(./assets/mediterranean_grill_somerville.jpg);
+}
+
+.section-header h1 {
+  font-size: 6rem;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-align: center;
+  padding-top: 10rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.section {
+  padding-left: 18rem;
+  margin: 4rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.section-card {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  height: 30rem;
+  width: 18rem;
+  border: 1px solid #c00a27;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+}
+.section-card img {
+  height: 10rem;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.section-card h3 {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.section-card p {
+  padding: 1rem;
+  height: 14rem;
+}
+
+.section-card .price {
+  font-weight: 700;
+  height: 4rem;
+}
+
+
+/**footer**/
+.footer {
+  height: 26rem;
+  padding-left: 18rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #2c2c2c;
+}
+.footer img {
+  margin: 4rem;
+  align-self: center;
+  height: 4rem;
+  width: auto;
+}
+.footer ul {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  padding: 2rem 8rem;
+}
+.footer ul li {
+  padding: 1rem 3rem;
+  border-right: 1px solid #c00a27;
+}
+.footer ul li:last-child {
+  border-right: none;
 }

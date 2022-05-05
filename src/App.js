@@ -12,6 +12,7 @@ import Desserts from './pages/Desserts';
 import Beverages from './pages/Beverages';
 import Catering from './pages/Catering';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/notfound" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
