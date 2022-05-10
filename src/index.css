@@ -7,7 +7,7 @@ body, html {
 }
 
 
-/** Navbar**/
+/* Navbar */
 .p-menu1 {
   display: none;
 }
@@ -44,6 +44,16 @@ nav ul a:hover {
   background-color: #c00a27;
   color: white;
   font-weight: 700;
+}
+nav ul a:hover > img {
+  animation: shake 0.2s; 
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 nav li:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -88,6 +98,7 @@ nav ul li span {
   color:rgba(0, 0, 0, 0.4)
 }
 
+
 /* Home */
 .section-main {
   padding-top: 4rem;
@@ -117,7 +128,6 @@ nav ul li span {
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
-
 .card::after {
   content: '';
   position: absolute;
@@ -128,7 +138,6 @@ nav ul li span {
   width: 100%;
   height: 100%;
 }
-
 .card_part {
   position: absolute;
   top: 0;
@@ -143,14 +152,11 @@ nav ul li span {
   background-size: cover;
   animation: picTransition 21s cubic-bezier(0, 0, 0, 0.9) infinite;
 }
-
-
 .card_part.card_part-two {
   z-index: 6;
   background-image: url( ./assets/Kebab.jpg );
   animation-delay: 7s;
 }
-
 .card_part.card_part-three {
   z-index: 5;
   background-image: url( ./assets/Falafel-balls.jpg );
@@ -192,17 +198,17 @@ nav ul li span {
 .aside-card p {
   padding: 1rem;
   align-self: center;
+  text-align: center;
 }
 
 
-
-/**apps & sides**/
+/* Hero */
 .section-header {
   margin-left: 18rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height:60vh;
+  height:45vh;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 }
@@ -230,17 +236,15 @@ nav ul li span {
 .section-contact-header {
   background-image: url(./assets/mediterranean_grill_somerville.jpg);
 }
-
 .section-header h1 {
   font-size: 6rem;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   text-align: center;
-  padding-top: 10rem;
+  padding-top: 6rem;
   text-align: center;
   color: white;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
 }
-
 .section {
   padding-left: 18rem;
   margin: 4rem;
@@ -268,18 +272,21 @@ nav ul li span {
   text-align: center;
   font-size: 1.2rem;
 }
-.section-card p {
-  padding: 1rem;
-  height: 14rem;
+.section-card ul {
+  padding: 0 0.7rem;
+  height: 12rem;
 }
-
+.section-card li {
+  padding: 0.1rem;
+}
 .section-card .price {
+  padding: 0 1rem;
   font-weight: 700;
   height: 4rem;
 }
 
 
-/**footer**/
+/* Footer */
 .footer {
   height: 26rem;
   padding-left: 18rem;
@@ -305,4 +312,136 @@ nav ul li span {
 }
 .footer ul li:last-child {
   border-right: none;
+}
+
+
+/* Catering */
+.cateringMenu {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  max-width: 700px;
+  font-family: "HelveticaNeue-Light";
+}
+.infoCatering {
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 14px;
+  padding:12px 0 12px 28px;
+  list-style: none;
+}
+
+/**accordion-menu**/
+.cateringMenu .panel {
+  padding: 0px 18px;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.cateringMenu .panel p {
+  font-size: 18px;
+  margin: 4px 0;
+}
+.panel-close {
+  max-height: 0;
+  transition: all 0.5s ease-out;
+}
+.panel-open {
+  max-height: 2000px;
+  transition: all 1s ease-out;
+}
+
+/***accordion-button***/
+.cateringMenu button.accordion {
+  background-color: #eee;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.cateringMenu h3 {
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #8A0504;
+  font-size: 26px;
+}
+
+.cateringMenu button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+.panel #price {
+  font-weight: bolder;
+  color: #BE6E41;
+}
+
+.panel h4 {
+  padding-top: 18px;
+  margin: 0.2rem 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+#rawWarning {
+  padding: 1rem;
+  font-size: 12px;
+}
+
+/* Contact */
+
+.section-contact {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  margin: 4rem; 
+}
+.info-main {
+  padding-left: 18rem;
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+.contact-info {
+  padding: 1rem;
+}
+.contact-info span {
+  font-weight: 700;
+  font-size: 1.7rem;
+  padding-right: 6px;;
+  color: #c00a27;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color:rgba(0, 0, 0, 0.8);
+  font-size: 1.4rem;
+}
+.hours {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 2rem;
+  border-left: 1px solid #c00a27;
+}
+.hours h4 {
+  font-size: 1.4rem;
+  color: #c00a27;
+  padding-bottom: 12px;;
+}
+.hours span {
+  padding-right:12px;
+}
+.hours p {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
 }
