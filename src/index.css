@@ -178,8 +178,8 @@ nav ul li span {
   justify-content: center;
 }
 .aside-card {
-  padding: 4rem 4rem;
-  width: 24rem;
+  padding: 4rem 2rem;
+  width: 22rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,6 +199,93 @@ nav ul li span {
   padding: 1rem;
   align-self: center;
   text-align: center;
+}
+
+/**review**/
+.reviews_outer {
+ display: flex;
+ flex-direction: column;
+ margin: 2rem;
+}
+.reviews_outer .reviews_line:nth-child(2) {
+  align-self: center;
+}
+.reviews_outer .reviews_line:nth-child(3) {
+  align-self: flex-end;
+}
+.reviews_line {
+  display: flex;
+  justify-content: space-between;
+}
+.reviews_yelp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 15rem;
+  margin: 1rem;
+}
+.reviews_yelp_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  
+}
+.reviews_yelp_link:hover {
+  animation: shake 0.2s ;
+
+}
+.reviews_yelp_link svg {
+  color: #ff1a1a;
+  height: 3rem;
+  width: 3rem;
+  filter: drop-shadow(1px 2px 2px rgb(0 0 0 / 0.4));
+}
+
+.reviews_yelp_link p {
+  color: #ff1a1a;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.reviews_card {
+  background-color: #eee;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid #8A0504;
+  width: 40rem;
+  height: 15rem;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+.reviewer_info {
+  display: flex;
+  align-items: center;
+}
+.reviewer_photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8A0504;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.reviewer_photo p {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.reviewer_name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding-left: 1rem;
+}
+.reviewer_star {
+  margin: 0.5rem 0;
+}
+.reviewer_review {
+  padding: 1rem 0 ;
 }
 
 
@@ -262,6 +349,8 @@ nav ul li span {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
   margin: 1rem;
 }
+
+
 .section-card img {
   height: 10rem;
   object-fit: cover;
@@ -398,13 +487,71 @@ nav ul li span {
 
 .section-contact {
   display: flex;
+  flex-direction: column;
   align-content: center;
+  align-items: center;
   justify-content: space-around;
-  margin: 4rem; 
+  /* margin: 4rem;  */
+}
+.email_form {
+  display: flex;
+  flex-direction: column;
+  height: 40rem;
+  width: 30rem;
+  margin: 2rem;
+}
+.email_form label {
+  padding: 0.6rem 0;
+  color: #c00a27;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.email_form input {
+  padding: 6px;
+  border: 1px solid #8A0504;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+}
+.email_form input:focus, .email_form textarea:focus{
+  outline: 0;
+  box-shadow: 3px 3px 5px #888;
+}
+.email_form textarea {
+  padding: 6px;
+  font-size: 1rem;
+  border: 1px solid #8A0504;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  height: 17rem;
+  resize: none;
+  margin-bottom: 2rem;
+}
+.email_form input[type=submit] {
+  width: 8rem;
+  align-self: center;
+  background-color: #8A0504;
+  color: #fff;
+  font-weight: 800;
+}
+.email_form input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #c00a27;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+.email_form input[type=submit]:active {
+  margin-top: 2px;
+  margin-left: 2px;
+  box-shadow: none;
+  color: #fff;
+}
+.info-outer {
+  display: flex;
+  align-self: center;
 }
 .info-main {
-  padding-left: 18rem;
-  margin: 4rem;
+  margin-right: 3rem;
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -429,7 +576,7 @@ nav ul li span {
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding: 2rem;
+  padding: 2rem 4rem;
   border-left: 1px solid #c00a27;
 }
 .hours h4 {

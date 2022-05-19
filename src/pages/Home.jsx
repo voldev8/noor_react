@@ -1,6 +1,7 @@
 import dinein from '../assets/dinein.png';
 import delivery2 from '../assets/delivery2.png';
 import catering from '../assets/catering.png';
+import Reviews from '../components/Reviews';
 
 function Home() {
   return (
@@ -39,6 +40,7 @@ function Home() {
           </p>
         </div>
       </div>
+      <Reviews />
     </div>
   );
 }
