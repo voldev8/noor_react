@@ -6,7 +6,6 @@ const AccordionItem = ({ index, title, items }) => {
   const onClick = (e, index) => {
     e.preventDefault();
     setActive(!active);
-    console.log(active);
   };
 
   return (
@@ -16,12 +15,12 @@ const AccordionItem = ({ index, title, items }) => {
       </button>
       <div className={active ? 'panel panel-open' : 'panel panel-close'}>
         <ul>
-          {items.map((item) => (
-            <li>
+          {items.map((item, index) => (
+            <li key={index}>
               <h4>{item.name}</h4>
               <ul>
-                {item.price.map((price_detail) => (
-                  <li>
+                {item.price.map((price_detail, index) => (
+                  <li key={index}>
                     <span id="price">{price_detail}</span>
                   </li>
                 ))}

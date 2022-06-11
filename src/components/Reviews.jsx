@@ -29,33 +29,37 @@ function Reviews() {
   }, []);
 
   return (
-    <div className="reviews_outer">
+    <div className="reviews-outer">
       {' '}
       {reviews &&
         reviews.length > 0 &&
         reviews.map((review, index) => (
-          <div className="reviews_line">
-            <div className="reviews_card">
-              <div className="reviewer_info">
-                <div className="reviewer_photo">
+          <div className="reviews-line" key={index}>
+            <div className="reviews-card">
+              <div className="reviewer-info">
+                <div className="reviewer-photo">
                   <p>{review.name[0]}</p>
                 </div>
-                <p className="reviewer_name">{review.name}</p>
+                <p className="reviewer-name">{review.name}</p>
               </div>
-              <div className="reviewer_star_outer">
-                {[...Array(review.stars)].map((star) => (
-                  <FaStar className="reviewer_star" color="#FCE205" />
+              <div className="reviewer-star-outer">
+                {[...Array(review.stars)].map((star, index) => (
+                  <FaStar
+                    className="reviewer-star"
+                    color="#FCE205"
+                    key={index}
+                  />
                 ))}
               </div>
-              <div className="reviewer_review">
+              <div className="reviewer-review">
                 <p>{review.review}</p>
               </div>
             </div>
             {index === 0 ? (
-              <div className="reviews_yelp">
+              <div className="reviews-yelp">
                 <a
                   href="https://www.yelp.com/biz/noor-mediterranean-grill-somerville"
-                  className="reviews_yelp_link"
+                  className="reviews-yelp-link"
                   target="_blank"
                   rel="noreferrer">
                   <FaYelp />

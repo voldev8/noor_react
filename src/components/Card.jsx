@@ -3,13 +3,13 @@ function Card({ page, id, name, description, price }) {
     <div className="section-card">
       <img src={require(`../assets/food/${page}/${name}.jpg`)} alt={name} />
       <h3>{name}</h3>
-      <p className="description">
+      <div className="description">
         <ul>
           {description.map((d, i) => (
             <li key={i}>{d}</li>
           ))}
         </ul>
-      </p>
+      </div>
       <p className="price">{price}</p>
     </div>
   );

@@ -8,9 +8,11 @@ import dinner_logo from '../assets/dinner.png';
 import desserts_logo from '../assets/dessert.png';
 import beverages_logo from '../assets/drink.png';
 
-function NavLinks() {
+function NavLinks({ checked, handleChange }) {
   return (
-    <ul>
+    <ul
+      className={checked ? 'nav-links active' : 'nav-links'}
+      onClick={handleChange}>
       <li>
         <a
           href="https://www.grubhub.com/restaurant/noor-mediterranean-grill-136-college-ave-somerville/289672"
@@ -69,7 +71,6 @@ function NavLinks() {
           <span>Order Catering Now</span>
         </a>
       </li>
-
       <li>
         <Link to="/contact">
           <span>Contact us</span>

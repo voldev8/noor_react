@@ -5,14 +5,14 @@ import Reviews from '../components/Reviews';
 
 function Home() {
   return (
-    <div className="section-main">
+    <div className="section">
       <div className="card">
         <h1>Noor Mediterranean Grill</h1>
-        <div className="card_part card_part-one"></div>
+        <div className="card-part card-part-one"></div>
         {/* Photo 2  */}
-        <div className="card_part card_part-two"></div>
+        <div className="card-part card-part-two"></div>
         {/* Photo 3  */}
-        <div className="card_part card_part-three"></div>
+        <div className="card-part card-part-three"></div>
       </div>
       <div className="aside">
         <div className="aside-card">

@@ -1,14 +1,11 @@
 body, html {
   font-family: 'Lato', sans-serif;
 }
-.center {
-  margin: auto;
-  width: 50%;
-}
 
 
 /* Navbar */
-.p-menu1 {
+
+.hamburger-menu {
   display: none;
 }
 nav {
@@ -48,6 +45,7 @@ nav ul a:hover {
 nav ul a:hover > img {
   animation: shake 0.2s; 
 }
+
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   30% { transform: translate(3px, 2px) rotate(0deg); }
@@ -55,13 +53,13 @@ nav ul a:hover > img {
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
 nav li:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 nav ul li span {
   align-self: center;
   font-size: 1.1rem;
-
 }
 .nav-logo {
   height: 3rem;
@@ -77,7 +75,6 @@ nav ul li span {
   padding-right: 1rem;
   opacity: 0.7;
 }
-
 .social {
   padding: 3rem;
   display: flex;
@@ -100,18 +97,19 @@ nav ul li span {
 
 
 /* Home */
-.section-main {
-  padding-top: 4rem;
-  padding-left: 18rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
 
+.section {
+  margin-left: 18rem;
+  padding: 6rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .card h1 {
  font-size: 3rem;
  font-weight: 700;
  align-self: center;
+ text-align: center;
  color: #c00a27;
  opacity: 0.4;
 }
@@ -125,6 +123,7 @@ nav ul li span {
   display: flex;
   justify-content: center;
   align-self: center;
+  text-align: center;
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -135,29 +134,32 @@ nav ul li span {
   top: 0;
   z-index: 900;
   display: block;
+  padding-left: 500px;
   width: 100%;
   height: 100%;
 }
-.card_part {
+.card-part {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 7;
   display: flex;
   align-items: center;
+  text-align: center;
   width: 100%;
   height: 100%;
   transform: translateX( 900px );
   background-image: url( ./assets/mediterranean_grill_somerville.jpg );
   background-size: cover;
+  background-position: center;
   animation: picTransition 21s cubic-bezier(0, 0, 0, 0.9) infinite;
 }
-.card_part.card_part-two {
+.card-part.card-part-two {
   z-index: 6;
   background-image: url( ./assets/Kebab.jpg );
   animation-delay: 7s;
 }
-.card_part.card_part-three {
+.card-part.card-part-three {
   z-index: 5;
   background-image: url( ./assets/Falafel-balls.jpg );
   animation-delay: 14s;
@@ -176,10 +178,11 @@ nav ul li span {
   flex-flow: wrap;
   align-content: center;
   justify-content: center;
+  padding: 2rem 0;
 }
 .aside-card {
   padding: 4rem 2rem;
-  width: 22rem;
+  width: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,66 +205,65 @@ nav ul li span {
 }
 
 /**review**/
-.reviews_outer {
+.reviews-outer {
  display: flex;
  flex-direction: column;
- margin: 2rem;
+ padding: 1rem;
 }
-.reviews_outer .reviews_line:nth-child(2) {
+.reviews-outer .reviews-line:nth-child(2) {
   align-self: center;
 }
-.reviews_outer .reviews_line:nth-child(3) {
+.reviews-outer .reviews-line:nth-child(3) {
   align-self: flex-end;
 }
-.reviews_line {
+.reviews-line {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.reviews_yelp {
+.reviews-yelp {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40rem;
+  width: 20rem;
   height: 15rem;
   margin: 1rem;
 }
-.reviews_yelp_link {
+.reviews-yelp-link {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  
 }
-.reviews_yelp_link:hover {
+.reviews-yelp-link:hover {
   animation: shake 0.2s ;
 
 }
-.reviews_yelp_link svg {
+.reviews-yelp-link svg {
   color: #ff1a1a;
   height: 3rem;
   width: 3rem;
   filter: drop-shadow(1px 2px 2px rgb(0 0 0 / 0.4));
 }
-
-.reviews_yelp_link p {
+.reviews-yelp-link p {
   color: #ff1a1a;
   margin-top: 1rem;
   font-size: 1.2rem;
 }
-.reviews_card {
+.reviews-card {
   background-color: #eee;
   margin: 1rem;
   padding: 1rem;
   border: 2px solid #8A0504;
-  width: 40rem;
+  width: 30rem;
   height: 15rem;
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2)
 }
-.reviewer_info {
+.reviewer-info {
   display: flex;
   align-items: center;
 }
-.reviewer_photo {
+.reviewer-photo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,34 +272,38 @@ nav ul li span {
   height: 3rem;
   border-radius: 50%;
 }
-.reviewer_photo p {
+.reviewer-photo p {
   color: #fff;
   font-weight: 800;
   font-size: 1.6rem;
   text-transform: uppercase;
 }
-.reviewer_name {
+.reviewer-name {
   font-size: 1.2rem;
   font-weight: 800;
   padding-left: 1rem;
 }
-.reviewer_star {
+.reviewer-star {
   margin: 0.5rem 0;
 }
-.reviewer_review {
-  padding: 1rem 0 ;
+.reviewer-review {
+  padding: 1rem 0;
+  height: 6rem;
+  overflow: scroll;
 }
 
 
 /* Hero */
+
 .section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 18rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height:45vh;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
 }
 .section-sides-header {
   background-image: url(./assets/Falafel-balls.jpg);
@@ -327,17 +333,8 @@ nav ul li span {
   font-size: 6rem;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   text-align: center;
-  padding-top: 6rem;
-  text-align: center;
   color: white;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
-}
-.section {
-  padding-left: 18rem;
-  margin: 4rem;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 .section-card {
   display: flex;
@@ -347,10 +344,8 @@ nav ul li span {
   width: 18rem;
   border: 1px solid #c00a27;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-  margin: 1rem;
+  margin: 1rem 2rem;
 }
-
-
 .section-card img {
   height: 10rem;
   object-fit: cover;
@@ -376,6 +371,7 @@ nav ul li span {
 
 
 /* Footer */
+
 .footer {
   height: 26rem;
   padding-left: 18rem;
@@ -405,6 +401,7 @@ nav ul li span {
 
 
 /* Catering */
+
 .cateringMenu {
   padding-top: 1rem;
   padding-bottom: 2rem;
@@ -416,6 +413,11 @@ nav ul li span {
   font-size: 14px;
   padding:12px 0 12px 28px;
   list-style: none;
+}
+.catering-contact {
+  color: #c00a27;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
 /**accordion-menu**/
@@ -461,16 +463,13 @@ nav ul li span {
   color: #8A0504;
   font-size: 26px;
 }
-
 .cateringMenu button.accordion.active, button.accordion:hover {
     background-color: #ddd;
 }
-
 .panel #price {
   font-weight: bolder;
   color: #BE6E41;
 }
-
 .panel h4 {
   padding-top: 18px;
   margin: 0.2rem 0;
@@ -483,6 +482,7 @@ nav ul li span {
   font-size: 12px;
 }
 
+
 /* Contact */
 
 .section-contact {
@@ -493,31 +493,31 @@ nav ul li span {
   justify-content: space-around;
   /* margin: 4rem;  */
 }
-.email_form {
+.email-form {
   display: flex;
   flex-direction: column;
   height: 40rem;
   width: 30rem;
   margin: 2rem;
 }
-.email_form label {
+.email-form label {
   padding: 0.6rem 0;
   color: #c00a27;
   font-weight: 600;
   font-size: 1.2rem;
 }
-.email_form input {
+.email-form input {
   padding: 6px;
   border: 1px solid #8A0504;
   border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   font-size: 1.1rem;
 }
-.email_form input:focus, .email_form textarea:focus{
+.email-form input:focus, .email-form textarea:focus{
   outline: 0;
   box-shadow: 3px 3px 5px #888;
 }
-.email_form textarea {
+.email-form textarea {
   padding: 6px;
   font-size: 1rem;
   border: 1px solid #8A0504;
@@ -527,20 +527,20 @@ nav ul li span {
   resize: none;
   margin-bottom: 2rem;
 }
-.email_form input[type=submit] {
+.email-form input[type=submit] {
   width: 8rem;
   align-self: center;
   background-color: #8A0504;
   color: #fff;
   font-weight: 800;
 }
-.email_form input[type=submit]:hover {
+.email-form input[type=submit]:hover {
   cursor: pointer;
   background-color: #c00a27;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transition: 0.3s;
 }
-.email_form input[type=submit]:active {
+.email-form input[type=submit]:active {
   margin-top: 2px;
   margin-left: 2px;
   box-shadow: none;
@@ -555,6 +555,7 @@ nav ul li span {
   display: flex;
   flex-direction: column;
   align-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .contact-info {
@@ -566,7 +567,6 @@ nav ul li span {
   padding-right: 6px;;
   color: #c00a27;
 }
-
 .contact-info a {
   text-decoration: none;
   color:rgba(0, 0, 0, 0.8);
@@ -592,3 +592,241 @@ nav ul li span {
   justify-content: space-between;
   padding-top: 6px;
 }
+
+
+/* Not Found */
+
+.not-found {
+  height: 60vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.not-found p {
+  font-size: 3rem;
+  text-align: center;
+}
+.not-found-btn {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.not-found-btn svg {
+  margin: 0 8px;
+}
+
+
+@media screen and (max-width: 1080px) {
+  .reviews-line {
+    justify-content: center;
+  }
+  .reviews-outer .reviews-line:nth-child(3) {
+    align-self: center;
+  }
+  .section {
+    padding: 2rem;
+  }
+  .aside-card {
+    width: 15rem;
+  }
+  .card {
+    margin-top: 3rem;
+  }
+  .info-main {
+    margin-right: 2rem;
+  }
+  .contact-info span {
+    font-size: 1.2rem;
+  }
+  .hours {
+    padding: 1rem;
+  }
+  .footer ul {
+    padding: 2rem;
+  }
+  .footer ul li {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 820px) { 
+  nav {
+    top: 0;
+    width: 100vw;
+    height: auto;
+  }
+  .nav-top {
+    top: 0;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    height: 2rem;
+    display: flex;
+    border-bottom: #8A0504;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    height: 45px;
+    margin: 10px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    z-index: 120;
+    cursor: pointer;
+  }
+  .hamburger div {
+    background-color: #c00a27;
+    position: relative;
+    width: 40px;
+    height: 5px;
+    margin-top: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  #toggle {
+    display: none;
+  }
+  #toggle:checked + .hamburger .top {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin-top: 22.5px;
+  }
+  #toggle:checked + .hamburger .meat {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -5px;
+  }
+  #toggle:checked + .hamburger .bottom {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  #toggle:checked ~ .menu {
+    height: 100%;
+  }
+
+
+  /* Menu */
+
+  .nav-links {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    z-index: 120;
+    height: 0;
+    transition: height 0.6s ease-out;
+  }
+  .active {
+    height: 100vh;
+  }
+  .social {
+    display: none;
+  }
+  .copyright {
+    display: none;
+  }
+  .card {
+    width: 100%;
+    height: 30rem;
+  }
+  .info-main {
+    padding-left: 0;
+  }
+  .section-header {
+    margin: 6rem 0;
+    height: 25vh;
+  }
+  .section {
+    padding: 0;
+    margin: 6rem 1rem;
+  }
+  .section-contact {
+    flex-direction: column;
+  }
+  .footer {
+    height: 25rem;
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .footer img {
+    margin: 1rem 0;
+    align-self: center;
+    height: 2rem;
+    width: auto;
+  }
+  .footer ul {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: white;
+  }
+  .footer ul li {
+    padding: 1rem 0;
+    border-right: none;
+    font-size: 0.8rem;
+    text-align: center;
+    padding-left: 6px;
+    border-bottom: 1px solid #c00a27;
+  }
+  .footer ul li:last-of-type {
+    border-bottom: none;
+  }
+ }
+
+ @media screen and (max-width: 440px) {
+  .card {
+    margin-top: 4rem;
+  }
+  .section {
+    margin: 3rem 1rem;
+  }
+  .section-header {
+    margin: 6rem 0 0 0;
+    background-size: auto auto;
+  }
+  .section-header h1 {
+    font-size: 4rem;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+  }
+  .aside-card {
+    padding: 2rem 1rem;
+  }
+  .aside-card:first-of-type, .aside-card:nth-of-type(2n)  {
+    border-bottom: 1px solid #c00a27;
+  }
+  .reviews-card {
+    width: 90vw;
+    margin: 1rem 0;
+  }
+  .reviews-yelp {
+    height: 10rem;
+  }
+  .email-form {
+    width: 100%;
+  }
+  .info-outer {
+    flex-wrap: wrap;
+  }
+  .info-main {
+    margin-right: 0;
+    padding-bottom: 2rem;
+  }
+  .hours {
+    padding: 2rem 1rem;
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #c00a27;
+  }
+  .footer {
+    height: 20rem;
+  }
+ } 

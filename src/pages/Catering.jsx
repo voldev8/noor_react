@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Hero from '../components/Hero';
 import AccordionItem from '../components/AccordionItem';
 
@@ -7,14 +9,14 @@ function Catering() {
   return (
     <>
       <Hero page={'catering'} header={'Catering'} />
-      <div class="section">
-        <div class="cateringMenu">
-          <ul class="infoCatering">
+      <div className="section">
+        <div className="cateringMenu">
+          <ul className="infoCatering">
             <li>
               For Additional Information Contact Us:
               <abbr title="Phone">
                 <span
-                  class="glyphicon glyphicon-phone"
+                  className="glyphicon glyphicon-phone"
                   aria-hidden="true"
                   style={{ height: '12px' }}></span>
               </abbr>{' '}
@@ -27,6 +29,11 @@ function Catering() {
             <li>
               We may be able to handle your request the same day, but 2-3 days
               in advance is appreciated.
+            </li>
+            <li>
+              <Link to="/contact" className="catering-contact">
+                <span>Send us an email now</span>
+              </Link>
             </li>
           </ul>
 

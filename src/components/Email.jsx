@@ -1,4 +1,6 @@
 import { useRef } from 'react';
+
+import { toast } from 'react-toastify';
 import emailjs from '@emailjs/browser';
 
 export const Email = () => {
@@ -7,27 +9,28 @@ export const Email = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // emailjs
-    //   .sendForm(
-    //     process.env.REACT_APP_EMAIL_SERVICE_ID,
-    //     process.env.REACT_APP_EMAIL_TEMPLATE_ID,
-    //     form.current,
-    //     process.env.REACT_APP_EMAIL_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
-    console.log('email sent');
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          toast.success('We have received your message.');
+        },
+        (error) => {
+          toast.error('Oops Something went wrong.');
+        }
+      );
+    toast.success('We have received your message.');
+
     e.target.reset();
   };
 
   return (
-    <form className="email_form" ref={form} onSubmit={sendEmail}>
+    <form className="email-form" ref={form} onSubmit={sendEmail}>
       <label>Name:</label>
       <input type="text" name="user_name" required />
       <label>Email:</label>
@@ -35,7 +38,11 @@ export const Email = () => {
       <label>Subject:</label>
       <input type="text" name="subject" />
       <label>Message:</label>
-      <textarea name="message" placeholder="Type your message here..." />
+      <textarea
+        name="message"
+        placeholder="Type your message here..."
+        required
+      />
       <input type="submit" value="Send" />
     </form>
   );
