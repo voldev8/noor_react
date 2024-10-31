@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import noor_logo from '../assets/noor-mediterranean-grill-logo.png';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import noor_logo from "../assets/noor-mediterranean-grill-logo.png";
 
-import NavLinks from './NavLinks';
-import NavSocial from './NavSocial';
+import NavLinks from "./NavLinks";
+import NavSocial from "./NavSocial";
 // import NavBurger from './NavBurger';
 
 function Navbar() {
@@ -37,7 +37,7 @@ function Navbar() {
 
       <NavSocial />
       <div className="copyright">
-        <p>Copyright © 2021 Noor Mediterranean Grill. All rights reserved.</p>
+        <p>Copyright © 2024 Noor Mediterranean Grill. All rights reserved.</p>
       </div>
     </nav>
   );

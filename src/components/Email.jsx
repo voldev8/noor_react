@@ -35,6 +35,8 @@ export const Email = () => {
       <input type="text" name="user_name" required />
       <label>Email:</label>
       <input type="email" name="user_email" required />
+      <label>Phone:</label>
+      <input type="tel" name="phone_number" required />
       <label>Subject:</label>
       <input type="text" name="subject" />
       <label>Message:</label>

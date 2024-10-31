@@ -1,18 +1,17 @@
-import { useState } from 'react';
-import Hero from '../components/Hero';
-import Card from '../components/Card';
-import menuWraps from '../data/menuWraps';
+import Hero from "../components/Hero";
+import Card from "../components/Card";
+import menuWraps from "../data/menuWraps";
 
 function Wraps() {
-  const [menu, setMenu] = useState(menuWraps);
+  const menu = menuWraps;
 
   return (
     <>
-      <Hero page={'wraps'} header={'Wraps'} />
+      <Hero page={"wraps"} header={"Wraps"} />
       <div className="section">
         {menu.map((item) => (
           <Card
-            page={'wraps'}
+            page={"wraps"}
             key={item.id}
             name={item.name}
             description={item.description}

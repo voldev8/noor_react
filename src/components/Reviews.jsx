@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react';
-import { FaStar, FaYelp } from 'react-icons/fa';
+import { useState, useEffect } from "react";
+import { FaStar, FaYelp } from "react-icons/fa";
 
 function Reviews() {
   const [reviews, setReviews] = useState([]);
   const getReviews = () => {
-    fetch('reviews.json', {
+    fetch("./reviews.json", {
       headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+        Accept: "application/json",
       },
     })
       .then(function (response) {
@@ -30,7 +31,6 @@ function Reviews() {
 
   return (
     <div className="reviews-outer">
-      {' '}
       {reviews &&
         reviews.length > 0 &&
         reviews.map((review, index) => (
@@ -61,7 +61,8 @@ function Reviews() {
                   href="https://www.yelp.com/biz/noor-mediterranean-grill-somerville"
                   className="reviews-yelp-link"
                   target="_blank"
-                  rel="noreferrer">
+                  rel="noreferrer"
+                >
                   <FaYelp />
                   <p>Leave us a review!</p>
                 </a>
