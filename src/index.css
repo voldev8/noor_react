@@ -44,6 +44,7 @@ nav ul a:hover {
 }
 nav ul a:hover > img {
   animation: shake 0.2s;
+  filter: invert(100%);
 }
 
 @keyframes shake {
@@ -219,6 +220,8 @@ nav ul li span {
   padding: 1rem;
   align-self: center;
   text-align: center;
+  /*to alignp in card*/
+  height: 6rem;
 }
 
 /**review**/
@@ -528,7 +531,6 @@ button.accordion:hover {
 .email-form input {
   padding: 6px;
   border: 1px solid #8a0504;
-  border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   font-size: 1.1rem;
 }
@@ -541,23 +543,22 @@ button.accordion:hover {
   padding: 6px;
   font-size: 1rem;
   border: 1px solid #8a0504;
-  border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   height: 17rem;
   resize: none;
   margin-bottom: 2rem;
 }
 .email-form input[type="submit"] {
-  width: 8rem;
+  width: 6rem;
   align-self: center;
   background-color: #8a0504;
   color: #fff;
-  font-weight: 800;
+  font-weight: 500;
 }
 .email-form input[type="submit"]:hover {
   cursor: pointer;
   background-color: #c00a27;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
   transition: 0.3s;
 }
 .email-form input[type="submit"]:active {
@@ -784,7 +785,6 @@ button.accordion:hover {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    color: white;
   }
   .footer ul li {
     padding: 1rem 0;

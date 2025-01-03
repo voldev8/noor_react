@@ -42,7 +42,7 @@ function Catering() {
             </li>
             <li className="catering-contact">
               <Link to="/contact">
-                <span>Send us an email now</span>
+                <span>Send us an email</span>
               </Link>
             </li>
             <li className="catering-contact">
@@ -51,7 +51,7 @@ function Catering() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>Order Catering Now Through EzCater</span>
+                <span>Order EzCater</span>
               </a>
             </li>
           </ul>

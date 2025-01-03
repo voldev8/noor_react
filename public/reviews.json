@@ -148,5 +148,30 @@
     "name": "Dillon",
     "stars": 5,
     "review": "Some of the best shawarma and other Middle Eastern dishes that I've had on this side of the Atlantic. My orders are always correct and speedy. I absolutely recommend!"
+  },
+  {
+    "name": "Conrad",
+    "stars": 5,
+    "review": "Very good wraps at cheap prices and fast service always. Easily the best \"fast food\" I've had in Boston."
+  },
+  {
+    "name": "Kib",
+    "stars": 5,
+    "review": "Great food and service. Everything is delicious! Great hidden gem. Everything is worth trying, too!"
+  },
+  {
+    "name": "Guy",
+    "stars": 4,
+    "review": "Very prompt delivery! The falafels were light and delicious! Could not believe how much neat we had with out lamb Shawarma!! And the pickles really set the perfect tone."
+  },
+  {
+    "name": "Ismiley",
+    "stars": 5,
+    "review": "Top tier shawarmas. No matter what you order, this restaurant will make sure to take good care of you."
+  },
+  {
+    "name": "Nate",
+    "stars": 5,
+    "review": "Great place! I like their kebab & shawarma plates (you get a lot of food!), as well as their wraps. The baba ghanoush is really tasty. Very friendly and quick service. Definitely recommend!"
   }
 ]
