@@ -37,7 +37,7 @@ function Navbar() {
 
       <NavSocial />
       <div className="copyright">
-        <p>Copyright © 2024 Noor Mediterranean Grill. All rights reserved.</p>
+        <p>Copyright © 2025 Noor Mediterranean Grill. All rights reserved.</p>
       </div>
     </nav>
   );

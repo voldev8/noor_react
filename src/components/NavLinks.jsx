@@ -1,25 +1,40 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import delivery_logo from '../assets/delivery.png';
-import fries_logo from '../assets/fries.png';
-import salad_logo from '../assets/salad.png';
-import wrap_logo from '../assets/wrap.png';
-import dinner_logo from '../assets/dinner.png';
-import desserts_logo from '../assets/dessert.png';
-import beverages_logo from '../assets/drink.png';
+import takeout_logo from "../assets/take-out.png";
+import delivery_logo from "../assets/delivery.png";
+import fries_logo from "../assets/fries.png";
+import salad_logo from "../assets/salad.png";
+import wrap_logo from "../assets/wrap.png";
+import dinner_logo from "../assets/dinner.png";
+import desserts_logo from "../assets/dessert.png";
+import beverages_logo from "../assets/drink.png";
+import catering_logo from "../assets/catering_menu.png";
+import contact_logo from "../assets/contact.png";
 
 function NavLinks({ checked, handleChange }) {
   return (
     <ul
-      className={checked ? 'nav-links active' : 'nav-links'}
-      onClick={handleChange}>
+      className={checked ? "nav-links active" : "nav-links"}
+      onClick={handleChange}
+    >
+      <li>
+        <a
+          href="https://order.labrador.ai/store/noor-mediterranean-grill-somerville/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="nav-icon" src={takeout_logo} alt="delivery" />
+          <span> Order Online</span>
+        </a>
+      </li>
       <li>
         <a
           href="https://www.grubhub.com/restaurant/noor-mediterranean-grill-136-college-ave-somerville/289672"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           <img className="nav-icon" src={delivery_logo} alt="delivery" />
-          <span> Order Online</span>
+          <span> Order Delivery</span>
         </a>
       </li>
       <li>
@@ -60,19 +75,13 @@ function NavLinks({ checked, handleChange }) {
       </li>
       <li>
         <Link to="/catering">
-          <span>Catering Menu</span>
+          <img className="nav-icon" src={catering_logo} alt="beverages" />
+          <span>Catering</span>
         </Link>
       </li>
       <li>
-        <a
-          href="https://www.ezcater.com/catering/pvt/noor-mediterranean-grill-somerville"
-          target="_blank"
-          rel="noopener noreferrer">
-          <span>Order Catering Now</span>
-        </a>
-      </li>
-      <li>
         <Link to="/contact">
+          <img className="nav-icon" src={contact_logo} alt="beverages" />
           <span>Contact us</span>
         </Link>
       </li>
