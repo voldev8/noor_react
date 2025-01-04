@@ -414,6 +414,10 @@ nav ul li span {
   padding: 1rem 3rem;
   border-right: 1px solid #c00a27;
 }
+.footer ul li a {
+  text-decoration: none;
+  color: inherit;
+}
 .footer ul li:last-child {
   border-right: none;
 }
@@ -570,6 +574,7 @@ button.accordion:hover {
 .info-outer {
   display: flex;
   align-self: center;
+  margin-top: 4rem;
 }
 .info-main {
   margin-right: 3rem;
