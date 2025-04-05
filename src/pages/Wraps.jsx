@@ -9,16 +9,18 @@ function Wraps() {
     <>
       <Hero page={"wraps"} header={"Wraps"} />
       <div className="section">
-        {menu.map((item) => (
-          <Card
-            page={"wraps"}
-            key={item.id}
-            name={item.name}
-            description={item.description}
-            description_additional={item.description_additional}
-            price={item.price}
-          />
-        ))}
+        <div className="section-grid">
+          {menu.map((item) => (
+            <Card
+              page={"wraps"}
+              key={item.id}
+              name={item.name}
+              description={item.description}
+              description_additional={item.description_additional}
+              price={item.price}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

@@ -115,6 +115,16 @@ nav ul li span {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.section-grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 18rem);
+  gap: 4rem;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
+  margin: 4rem 0;
+}
 .card h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -228,7 +238,6 @@ nav ul li span {
 .reviews-outer {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
 }
 .reviews-outer .reviews-line:nth-child(2) {
   align-self: center;
@@ -361,8 +370,9 @@ nav ul li span {
   height: 30rem;
   width: 18rem;
   border: 1px solid #c00a27;
+  /* background-color: rgb(214, 214, 214, 0.9); */
+  background-color: rgb(238, 238, 238);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-  margin: 1rem 2rem;
 }
 .section-card img {
   height: 10rem;
@@ -373,18 +383,23 @@ nav ul li span {
   padding: 2rem;
   text-align: center;
   font-size: 1.2rem;
+  background-color: rgba(214, 214, 214, 0.5);
 }
 .section-card ul {
-  padding: 0 0.7rem;
+  padding: 0.5rem 0.7rem;
   height: 12rem;
 }
 .section-card li {
   padding: 0.1rem;
 }
+.section-card p {
+  align-content: center;
+}
 .section-card .price {
   padding: 0 1rem;
   font-weight: 700;
   height: 4rem;
+  align-self: flex-end;
 }
 
 /* Footer */
@@ -853,3 +868,20 @@ button.accordion:hover {
     height: 20rem;
   }
 }
+
+/* section-grid breal points*/
+/* @media screen and (max-width: 1720px) {
+  .section-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1380px) {
+  .section-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+} */

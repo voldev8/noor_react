@@ -9,16 +9,18 @@ function Desserts() {
     <>
       <Hero page={"desserts"} header={"Desserts"} />
       <div className="section">
-        {menu.map((item) => (
-          <Card
-            page={"desserts"}
-            key={item.id}
-            name={item.name}
-            description={item.description}
-            description_additional={item.description_additional}
-            price={item.price}
-          />
-        ))}
+        <div className="section-grid">
+          {menu.map((item) => (
+            <Card
+              page={"desserts"}
+              key={item.id}
+              name={item.name}
+              description={item.description}
+              description_additional={item.description_additional}
+              price={item.price}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
