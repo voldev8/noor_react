@@ -6,13 +6,13 @@ const menuWraps = [
       "Choice of Beef or Chicken Shawerma Hummus, Tahini or Garlic Sauce Lettuce, tomatoes, onions, pickles and french fries inside wrap.",
     ],
 
-    price: "$12.99",
+    price: "$13.38",
   },
   {
     id: 2,
     name: "Beef Kebab Wrap",
     description: ["Flame broiled marinated Angus beef."],
-    price: "$12.99",
+    price: "$13.38",
   },
   {
     id: 3,
@@ -20,19 +20,19 @@ const menuWraps = [
     description: [
       "Tender marinated Angus beef, slow cooked on a vertical rotisserie.",
     ],
-    price: "$11.99",
+    price: "$12.35",
   },
   {
     id: 4,
     name: "Lule Kebab Wrap",
     description: ["Flame broiled marinated ground Angus beef."],
-    price: "$11.99",
+    price: "$12.35",
   },
   {
     id: 5,
     name: "Chicken Kebab Wrap",
     description: ["Flame broiled marinated chicken breast."],
-    price: "$12.49",
+    price: "$12.86",
   },
   {
     id: 6,
@@ -40,13 +40,13 @@ const menuWraps = [
     description: [
       "Tender marinated chicken, slow-cooked on a vertical rotisserie.",
     ],
-    price: "$11.99",
+    price: "$12.35",
   },
   {
     id: 7,
     name: "Falafel Wrap",
     description: ["Falafel balls, tahini sauce, lettuce, tomato, and pickles."],
-    price: "$10.99",
+    price: "$11.32",
   },
   {
     id: 8,
@@ -54,7 +54,7 @@ const menuWraps = [
     description: [
       "Hummus or Baba Dip wrapped with lettuce, tomatoes, pickled cucumbers, pickled turnips & marinated onions.",
     ],
-    price: "$10.49",
+    price: "$10.80",
   },
 ];
 

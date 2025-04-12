@@ -9,7 +9,7 @@ const menuDinners = [
       "Served with salad & pita bread.",
       "Substitute salad for Fattoush ($1.00) or Tabbouli ($2.00)",
     ],
-    price: "$23.99",
+    price: "$24.71",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const menuDinners = [
       "Served with salad & pita bread.",
       "Substitute salad for Fattoush ($1.00) or Tabbouli ($2.00)",
     ],
-    price: "$23.49",
+    price: "$24.19",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const menuDinners = [
       "Served with salad & pita bread.",
       "Substitute salad for Fattoush ($1.00) or Tabbouli ($2.00)",
     ],
-    price: "$19.99",
+    price: "$20.59",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const menuDinners = [
       "Served with salad & pita bread.",
       "Substitute salad for Fattoush ($1.00) or Tabbouli ($2.00)",
     ],
-    price: "$19.99",
+    price: "$20.59",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const menuDinners = [
       "Served with salad & pita bread.",
       "Substitute salad for Fattoush ($1.00) or Tabbouli ($2.00)",
     ],
-    price: "$22.49",
+    price: "$23.16",
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ const menuDinners = [
       "Served with salad & pita bread.",
       "Substitute salad for Fattoush ($1.00) or Tabbouli ($2.00)",
     ],
-    price: "$19.99",
+    price: "$20.59",
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ const menuDinners = [
       "Served with salad & pita bread.",
       "Substitute salad for Fattoush ($1.00) or Tabbouli ($2.00)",
     ],
-    price: "$15.49",
+    price: "$15.95",
   },
   {
     id: 8,
@@ -89,7 +89,7 @@ const menuDinners = [
     description: [
       "Tabbouli, fattoush, hummus & choice of baba dip or sarma (3pc) on a garden salad",
     ],
-    price: "$15.99",
+    price: "$16.47",
   },
   {
     id: 9,
@@ -97,7 +97,7 @@ const menuDinners = [
     description: [
       "Bowl of Rice Pilaf with a choice of Chickeen Shawerma or Beef Shawerma",
     ],
-    price: "$14.99",
+    price: "$15.44",
   },
 ];
 
